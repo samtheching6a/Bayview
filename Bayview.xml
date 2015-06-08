@@ -1,1 +1,65 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_whileUntil" id="487" inline="false" x="-540" y="-706">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="494">
+        <field name="OBJECT">ENTER</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="oled_cleardisplay" id="504">
+        <next>
+          <block type="oled_setcursor" id="520" inline="true">
+            <value name="STARTX">
+              <block type="math_number" id="886">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <value name="STARTY">
+              <block type="math_number" id="831">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="566" inline="false">
+                <value name="IF0">
+                  <block type="logic_compare" id="584" inline="true">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="sensor_object" id="701">
+                        <field name="OBJECT">LEFTFRONT</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="800">
+                        <field name="NUM">70</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="movement_forward" id="577">
+                    <next>
+                      <block type="robot_delay" id="413" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="909">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="multimedia_displaybmp" id="989">
+                    <field name="BMP">hadouken </field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
